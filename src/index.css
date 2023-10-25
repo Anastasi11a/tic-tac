@@ -1,0 +1,88 @@
+.app {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  color: #370f88;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+p {
+  color: rgb(68, 17, 86);
+  font-size: 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.gameboard {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px purple;
+}
+
+.square {
+  width: 100px;
+  height:  100px;
+  border: solid 2px purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.circle {
+  width:  90px;
+  height: 90px;
+  border-radius: 50%;
+  border: solid 15px gray;
+  box-sizing: border-box;
+}
+
+.cross {
+  width:  90px;
+  height: 90px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.cross:before, .cross:after {
+  content: '';
+  position: absolute;
+  background-color: palevioletred;
+}
+
+.cross:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+.cross:after {
+  top: 50%;
+  width: 100%;
+  margin-top: -15%;
+  height: 30%;
+}
+
+.btnRestart { 
+  margin-top: 16px;
+  padding: 4px;
+  font-size: 16px;
+  border: 2px solid purple;
+  border-radius: 5px;
+  color: rgb(174, 3, 60);
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
